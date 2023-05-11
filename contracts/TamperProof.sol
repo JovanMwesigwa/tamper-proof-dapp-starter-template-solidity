@@ -1,18 +1,10 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.9;
 
-// Uncomment this line to use console.log
-// import "hardhat/console.sol";
+// @title A contract for Trustworthy product delivery service powered by a Escrow Smart Contract
+// @author Jovan Mwesigwa Balambirwa
+// @github https://github.com/JovanMwesigwa
 
-// {
-//   Title: 'This is a test PDF file',
-//   Author: 'cdaily',
-//   Creator: 'Microsoft Word 8.0',
-//   Producer: 'macOS Version 13.3 (Build 22E252) Quartz PDFContext, AppendMode 1.1',
-//   CreationDate: "D:20000628232108Z00'00'",
-//   ModDate: "D:20230511061752Z00'00'"
-//   DocLength: 1128
-// }
 error TamperProof__NotAuthorized();
 
 contract TamperProof {

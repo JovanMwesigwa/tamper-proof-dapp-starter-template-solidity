@@ -1,18 +1,18 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("hardhat-deploy");
-require("dotenv").config();
+require('@nomicfoundation/hardhat-toolbox')
+require('hardhat-deploy')
+require('dotenv').config()
 
-const { ALFAJORES_API_KEY, ALFAJORES_URL, PRIVATE_KEY } = process.env;
+const { ALFAJORES_API_KEY, ALFAJORES_URL, PRIVATE_KEY } = process.env
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: 'hardhat',
   networks: {
     hardhat: {
       chainId: 31337,
     },
     localhost: {
-      url: "http://127.0.0.1:8545",
+      url: 'http://127.0.0.1:8545',
       chainId: 31337,
     },
     alfajores: {
@@ -24,18 +24,21 @@ module.exports = {
   solidity: {
     compilers: [
       {
-        version: "0.8.9",
+        version: '0.8.9',
       },
       {
-        version: "0.8.18",
+        version: '0.8.18',
       },
       {
-        version: "0.8.7",
+        version: '0.8.7',
       },
       {
-        version: "0.6.6",
+        version: '0.6.6',
       },
     ],
+  },
+  paths: {
+    artifacts: './client/backend',
   },
   namedAccounts: {
     deployer: {
@@ -48,13 +51,13 @@ module.exports = {
     },
     customChains: [
       {
-        network: "alfajores",
+        network: 'alfajores',
         chainId: 44787,
         urls: {
-          apiURL: "https://api-alfajores.celoscan.io/api",
-          browserURL: "https://alfajores.celoscan.io/",
+          apiURL: 'https://api-alfajores.celoscan.io/api',
+          browserURL: 'https://alfajores.celoscan.io/',
         },
       },
     ],
   },
-};
+}
